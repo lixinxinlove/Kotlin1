@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.widget.Button
 import com.lxx.kotlin1.R
 
-
 class MainActivity : BaseActivity() {
 
     private var btnLogin: Button? = null
@@ -19,11 +18,7 @@ class MainActivity : BaseActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
-
         super.onCreate(savedInstanceState)
-
         intent = getIntent()
         if (intent != null) {
             var intentAction = intent.getAction()
@@ -49,17 +44,12 @@ class MainActivity : BaseActivity() {
 
             var intent = Intent(this, Transition2Activity::class.java)
 
-
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
-            }else{
+            } else {
                 startActivity(intent)
             }
-
-
         }
-
-
     }
 
     override fun initData() {

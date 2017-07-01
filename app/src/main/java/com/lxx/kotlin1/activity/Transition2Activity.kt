@@ -12,17 +12,13 @@ import android.widget.TextView
 import com.lxx.kotlin1.R
 
 class Transition2Activity : AppCompatActivity() {
-
     private var iv: ImageView? = null
-
 
     init {
         System.loadLibrary("native-lib")
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
             var slide = Slide()
@@ -40,6 +36,8 @@ class Transition2Activity : AppCompatActivity() {
         tv = findViewById(R.id.tv) as TextView
         tv.text = stringFromJNI()
     }
+
+
 
     external fun stringFromJNI(): String
 }
