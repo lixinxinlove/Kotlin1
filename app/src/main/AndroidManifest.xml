@@ -33,7 +33,20 @@
         </activity>
         <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.FragmentActivity" />
-        <activity android:name=".activity.Transition2Activity"></activity>
+        <activity android:name=".activity.Transition2Activity" />
+
+        <receiver
+            android:name=".receiver.LocalBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+
+                <action android:name="com.lxx.kotlin1.lee"></action>
+            </intent-filter>
+
+        </receiver>
     </application>
 
 </manifest>
