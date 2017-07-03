@@ -5,6 +5,9 @@
     android:layout_height="match_parent">
 
 
+
+
+
     <ImageView
         android:id="@+id/iv"
         android:layout_width="100dp"
@@ -51,5 +54,9 @@
         android:layout_alignParentRight="true"
         android:background="@color/colorAccent" />
 
-
+    <TextView
+        android:text="1234567890"
+        android:id="@+id/tv_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </RelativeLayout>
