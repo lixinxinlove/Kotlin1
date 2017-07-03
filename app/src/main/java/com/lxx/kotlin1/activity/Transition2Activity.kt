@@ -75,8 +75,8 @@ class Transition2Activity : AppCompatActivity() {
 
 
         tvTop = findViewById(R.id.tv_top) as TextView
-        fun1()
-        //changeTopBgColor()
+        //  fun1()
+        changeTopBgColor()
     }
 
     fun pathAnim() {
@@ -122,22 +122,22 @@ class Transition2Activity : AppCompatActivity() {
                     var s4: Palette.Swatch? = p.darkMutedSwatch      //获取柔和的黑
                     var s6: Palette.Swatch? = p.lightMutedSwatch    //获取柔和的亮
 
-                    tvTop?.setBackgroundColor(s2!!.bodyTextColor)
-                    tvTop?.setTextColor(s2!!.titleTextColor)
+                    ///  tvTop?.setBackgroundColor(s2!!.bodyTextColor)
+                    //  tvTop?.setTextColor(s2!!.titleTextColor)
                 }
     }
 
     fun changeTopBgColor() {
         // 用来提取颜色的Bitmap
-        val bitmap = BitmapFactory.decodeResource(resources, R.mipmap.ic)
+        val bitmap = BitmapFactory.decodeResource(resources, R.mipmap.palett)
         // Palette的部分
         val builder = Palette.from(bitmap)
         builder.generate { palette ->
             //获取到充满活力的这种色调
             var vibrant = palette.vibrantSwatch
             var vibrant1 = palette.lightMutedSwatch
-            tvTop?.setBackgroundColor(vibrant!!.bodyTextColor)
-            tvTop?.setTextColor(vibrant1!!.titleTextColor)
+            //   tvTop?.setBackgroundColor(vibrant!!.bodyTextColor)
+            //   tvTop?.setTextColor(vibrant1!!.titleTextColor)
         }
     }
 
